@@ -2,10 +2,13 @@ import Race from './Race';
 
 export default class Orc extends Race {
   private _count: number;
-  constructor(name: string, dexterity: number, private _maxLifePoints = 74) {
+  private _maxLifePoints: number;
+  
+  constructor(name: string, dexterity: number) {
     super(name, dexterity);
     this._count = 0;
-    this.createdRacesInstances();
+    this._maxLifePoints = 74;
+    // this.createdRacesInstances();
   }
 
   get maxLifePoints(): number {
